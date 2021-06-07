@@ -59,5 +59,43 @@ Investigate rules engines and inference engines. These are powerful ways to solv
 public class App {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
+
+        System.out.print("Is the car silent when you turn the key? ");
+        String ans1 = input.nextLine();
+        if (ans1.equalsIgnoreCase("y")){
+            System.out.print("Is the car silent when you turn the key? ");
+            String ans2 = input.nextLine();
+            if (ans2.equalsIgnoreCase("y")){
+                System.out.println("Clean terminals and try starting again.");
+            }else{
+                System.out.println("Replace cables and try again");
+            }
+        }else{
+            System.out.print("Does the car make a slicking noise? ");
+            String ans3 = input.nextLine();
+            if(ans3.equalsIgnoreCase("y")){
+                System.out.println("replace the battery");
+            }else{
+                System.out.print("Does the car crank up and fail to start? ");
+                String ans4 = input.nextLine();
+                if (ans4.equalsIgnoreCase("y")){
+                    System.out.println("Check the spark plug connection.");
+                }else{
+                    System.out.print("Does the engine start and then die? ");
+                    String ans5 = input.nextLine();
+                    if (ans5.equalsIgnoreCase("y")){
+                        System.out.print("Does the car have fuel injection? ");
+                        String ans6 = input.nextLine();
+                        if (ans6.equalsIgnoreCase("y")){
+                            System.out.println("get it in for service");
+                        }else{
+                            System.out.println("Check to ensure the choke is opening and closing");
+                        }
+                    }else{
+                        System.out.println("This should not be possible");
+                    }
+                }
+            }
+        }
     }
 }
